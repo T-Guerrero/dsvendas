@@ -19,10 +19,13 @@ html, body {
 }
 
 .footer {
-    flex-shrink: 0;
+    flex-shrink: 1;
     text-align: center;
 }
 
+/*
+Override bootstrap
+*/
 .bg-primary {
     background-color: var(--color-primary) !important;
 }
