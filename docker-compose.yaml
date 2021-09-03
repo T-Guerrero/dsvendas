@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  db:
+    build: ./backend
+    ports:
+      - 3333:5432
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: dsvendas
+      POSTGRES_DB: dsvendas
+      POSTGRES_PASSWORD: dsvendas
+
+volumes:
+  dbdata:
