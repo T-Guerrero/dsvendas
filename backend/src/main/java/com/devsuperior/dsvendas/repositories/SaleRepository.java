@@ -6,16 +6,18 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
+
 public interface SaleRepository extends JpaRepository<Sale, Long> {
 
-    @Query("SELECT obj.seller, SUM(obj.amount) " +
-            " FROM Sale AS obj " +
-            " GROUP BY obj.seller")
+    @Query("SELECT seller, SUM(obj.amount) " +
+            " FROM Sale AS obj  " +
+            " JOIN obj.seller AS seller " +
+            " GROUP BY seller")
     List<Object[]> amountGroupedBySeller();
 
-    @Query("SELECT obj.seller, SUM(obj.visited), SUM(obj.deals) " +
+    @Query("SELECT seller, SUM(obj.visited), SUM(obj.deals) " +
             " FROM Sale AS obj " +
-            " GROUP BY obj.seller")
+            " JOIN obj.seller AS seller " +
+            " GROUP BY seller")
     List<Object[]> successGroupedBySeller();
-
 }
