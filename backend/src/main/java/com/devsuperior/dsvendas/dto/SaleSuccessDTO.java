@@ -32,11 +32,11 @@ public class SaleSuccessDTO implements Serializable {
         this.visited = visited;
     }
 
-    public Long getDetails() {
+    public Long getDeals() {
         return deals;
     }
 
-    public void setDetails(Long deals) {
+    public void setDeals(Long deals) {
         this.deals = deals;
     }
 }
