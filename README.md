@@ -34,6 +34,10 @@ $> yarn start
 
 ## Backend Structure
 
-### UML
+### Conceptual Model
+
+![uml_image](https://github.com/T-Guerrero/dsvendas/blob/main/docs/uml.png?raw=true)
 
 ### Backend Architecture
+
+![architecture_image](https://github.com/T-Guerrero/dsvendas/blob/main/docs/architecture.png?raw=true)
