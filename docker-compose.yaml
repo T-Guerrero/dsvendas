@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   db:
-    build: ./backend
+    image: postgres:12
     ports:
       - 3333:5432
     volumes:
@@ -11,5 +11,15 @@ services:
       POSTGRES_DB: dsvendas
       POSTGRES_PASSWORD: dsvendas
 
+  back:
+    build: ./backend
+    ports:
+      - 8080:8080
+    volumes:
+      - ./backend:/usr/src/app
+    environment:
+      APP_PROFILE: dev
+    depends_on:
+      - db
 volumes:
   dbdata:
