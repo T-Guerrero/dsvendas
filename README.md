@@ -20,7 +20,7 @@ It was used:
   * Netlify
 
 ## Running
-To build and up the postgreSQL container on `:3333`:
+To build and up the postgreSQL container on `:3333` and Spring Boot container on `localhost:8080`:
 ```bash
 # Root directory
 $> docker-compose up --build
