@@ -11,11 +11,18 @@ You can check the deploy on:
 
 ## Technologies
 It was used:
-  * React.js
+
+### Frontend
+ * React.js
+ * Axios
+
+### Backend
   * Spring Boot
   * H2 database 
   * PostgreSQL
   * Docker
+
+### Deployment
   * Heroku
   * Netlify
 
